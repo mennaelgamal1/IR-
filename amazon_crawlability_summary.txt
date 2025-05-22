@@ -1,0 +1,54 @@
+
+Crawlability Summary for https://www.amazon.eg
+
+1. Crawl-delay Directive
+- Not specified in robots.txt
+- Crawlers are not explicitly limited by delay, but should behave politely.
+
+2. Sitemap Location
+- Not provided in robots.txt
+- No Sitemap: directive found. Crawlers must discover sitemap links by other means (e.g., metadata or guessing common paths like /sitemap.xml).
+
+3. User-Agent Specific Rules
+
+Completely Blocked Bots:
+- EtaoSpider: Denied
+- GPTBot: Denied
+- CCBot: Denied
+- PerplexityBot: Denied
+
+Generic Rules for All Bots (*):
+Disallowed Directories and URLs:
+- /exec/obidos/account-access-login
+- /ap/signin
+- /gp/sign-in
+- /gp/cart
+- /gp/item-dispatch
+- /gp/customer-media/*
+- /wishlist/
+- /gp/wishlist/
+- /gp/video/
+- /reviews/iframe
+- /-/ (except /-/en/)
+- /hz/help/contact/*/message/$
+
+Allowed Specific Paths:
+- /wishlist/universal
+- /gp/wishlist/universal
+- /gp/wishlist/ipad-install
+- /-/en/
+
+4. Crawling Permission Test Results
+
+URL                                                      | Crawling Allowed?
+----------------------------------------------------------|------------------
+/gp/cart                                                 | No
+/gp/help/customer/display.html                           | No
+/-/en/ref=nav_logo                                       | Yes
+/wishlist/universal                                      | Yes
+/exec/obidos/account-access-login                        | No
+
+Conclusion:
+Amazon.eg strictly controls access to user-sensitive and dynamic content areas.
+It allows bots to crawl universal or public paths only.
+The site lacks both Crawl-delay and Sitemap declarations, implying that responsible bots must self-regulate and attempt to discover content responsibly.
